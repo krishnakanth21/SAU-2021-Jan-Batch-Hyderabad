@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Login page</title>        
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 {
+    background-color: #65c5f1; /* White */
+    color: #555555;
+  }   
+
+  .bg-4 {
+  background-color: #2f2f2f;
+  color: #ffffff;
+} 
+
+  </style>
+ </head>
+
+ <body onload="displayName()">
+  <!-- <p title ="hola!">hello world <br>hey man</br></p> -->
+  <div class="container-fluid bg-1 text-center">
+    <img  style="height: 90px; width:90px" src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" class="img-circle">
+  <h1 style="color: blueviolet;"><center>Login Page:</center></h1>
+  </div>
+
+  <div class="container-fluid bg-2 text-center">
+    <h3>What is this page?</h3>
+    <p>Please enter all the below details for logging in,the details will also be saved in the localStorage!</p>
+  </div>
+
+  
+  <!-- <div class="container-fluid bg-3 text-center">
+  <form onsubmit="return saveuser()">
+
+    <p>Enter first_name:   <input type="text"/></p>
+    <p>Enter last_name:    <input type="text"/></p>
+    <p>Enter email:        <input type="email"/></p>
+    <p>Enter password:     <input type="password"/></p>
+    <p>Enter phone number: <input type="tel" pattern="[0-9]{10}" placeholder="0123456789"/></p>
+    <p>Enter DOB:          <input type="date"/></p>
+    <p>Enter Gender: <br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br></p>
+    <p>Enter age:          <input type="number" min="1" max="120"/></p>
+    <p>Enter favorite colour: <input type="color"/></p>
+    <br>
+    <input type="submit"/>
+
+  </form>
+ </div> -->
+ <div class="container">
+  <h2>Basic Login Page</h2>
+  <form>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+    </div>
+    <button type="submit" class="btn btn-default" onclick="saveuser()">Submit</button>
+  </form>
+</div>
+ <footer class="container-fluid bg-4 text-center">
+  <p>Thank you for filling the details </p>
+</footer>
+<p>the local email is: <span id="localStorage"></span></p>
+<p>the local pwd is: <span id="localStorage1"></span></p>
+  <script>
+      function saveuser(){
+          alert("user saved");
+          localStorage.setItem('email1',document.getElementById("email").value);  
+          localStorage.setItem('pwd1',document.getElementById("pwd").value);         
+          document.getElementById("localStorage").innerHTML=localStorage.getItem("email1");                 
+          document.getElementById("localStorage1").innerHTML=localStorage.getItem("pwd1");
+      }
+      function displayName(){
+                document.getElementById("localStorage").innerHTML=localStorage.getItem("email1");
+                document.getElementById("localStorage1").innerHTML=localStorage.getItem("pwd1");
+            }
+  </script>
+  
+ </body>
+</html>
