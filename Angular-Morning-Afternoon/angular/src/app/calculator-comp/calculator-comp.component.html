@@ -1,0 +1,43 @@
+<head>
+    <style>
+        #buttons{
+          margin: 10px;
+          padding: 10px;
+        }
+        .btn{
+          margin-left: 10px;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">            
+            <div class="col-sm"><h1 style="color:black">Calculator</h1></div>
+          </div>
+         
+                <p>Input 1:</p>
+                <input id="num1" style="margin-left: 10px;"  [(ngModel)]="num1"  />
+                <p>Input 2:</p>
+                <input id = "num2"  style="margin-left: 10px;" [(ngModel)]="num2"  />
+          
+        
+          <div class="row">
+           
+           
+                <div id="buttons">
+                <button class= "btn" (click)="addition()">Add</button>
+                <button class= "btn" (click)="subtraction()">Subtract</button>
+                <button class= "btn" (click)="multiply()">Multiply</button>
+                <button class= "btn" (click)="divide()">Divide</button>
+                </div>
+           
+           
+          </div>
+          <div class="row " style="color: chocolate;">
+            
+             
+                <h3>Result:{{ result }}</h3>
+            
+        </div>
+    </div>
+</body>

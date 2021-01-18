@@ -1,0 +1,29 @@
+<div class="container" >
+  
+    <div class="row">
+      <div class="col-sm" style="text-align: center"><h2 class="display-4">Http Api Request</h2></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm" style="text-align: center"><label></label>
+        <button class= "btn" style="margin-left: 20px;" (click) = "getData()">Show data fetched using api</button>
+      </div>
+    </div>
+    <br>
+    <table class = "table" style="width: 100%;">
+      <thead class="thead-light">
+      <tr style="text-align: center;">
+          <!-- <th>User ID</th> -->
+          <th>Identifier</th>
+          <th>Heading</th>
+          <th>Content</th>
+      </tr>
+  </thead>
+      <tr *ngFor = "let row of webData">
+          <!-- <td style="text-align: center;">{{row.userId}}</td> -->
+          <td style="text-align: center;">{{row.id}}</td>
+          <td style="text-align: center;">{{row.title}}</td>
+          <td style="text-align: center;">{{row.body}}</td>
+        </tr>
+    </table>
+  </div>
