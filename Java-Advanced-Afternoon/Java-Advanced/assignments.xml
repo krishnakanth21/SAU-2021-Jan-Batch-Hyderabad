@@ -1,0 +1,17 @@
+<assignments>
+    <assignment id="1">
+        <name>React course</name>
+        <prog_lang>react js</prog_lang>
+        <status_update>submitted</status_update>
+    </assignment>
+    <assignment id="2">
+        <name>Angular course</name>
+        <prog_lang>typescript</prog_lang>
+        <status_update>submitted</status_update>
+    </assignment>
+    <assignment id="3">
+        <name>Machine Learning</name>
+        <prog_lang>pyhon3</prog_lang>
+        <status_update>started</status_update>
+    </assignment>
+</assignments>
